@@ -213,7 +213,6 @@
 		// Raise the display to the foreground
 		const display = document.getElementById("display");
 		display.parentElement.style.zIndex = 5;
-		plausible("Display activated");
 	}
 	function handleProcessCreated()
 	{
@@ -239,7 +238,6 @@
 					if(configObj.diskImageUrl.startsWith(wssProtocol))
 					{
 						// WebSocket protocol failed, try agin using plain HTTP
-						plausible("WS Disk failure");
 						blockDevice = await CheerpX.CloudDevice.create("https:" + configObj.diskImageUrl.substr(wssProtocol.length));
 					}
 					else

@@ -6,7 +6,7 @@ function handleProcessCreated(processCount)
 	// Log only the first process, as a proxy for successful startup
 	if(processCount == 1)
 	{
-		plausible("Alpine init");
+		
 	}
 }
 </script>
